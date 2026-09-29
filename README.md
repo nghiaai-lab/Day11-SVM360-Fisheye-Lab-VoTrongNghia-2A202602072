@@ -2,9 +2,11 @@
 
 **Bài chính Day 11 · 240 phút lab · mỗi học viên nộp một repo Public.** Bạn có thể trao đổi và đổi bản export để QA, nhưng tự gán nhãn, ghi quyết định và nộp bài của mình. Bắt đầu từ trang này; [GUIDE.md](GUIDE.md) là hướng dẫn thao tác CVAT chi tiết khi cần, còn [RUBRIC.md](RUBRIC.md) cho biết **100 điểm** được đọc từ bằng chứng nào.
 
-## Hồ sơ của Võ Trọng Nghĩa
+## Bằng chứng đóng góp của Võ Trọng Nghĩa trong nhóm
 
 **[Xem chỉ mục bằng chứng và kết quả vai B](ROLE_B_REPORT.md).**
+
+**Trạng thái so với đề gốc:** Đây là hồ sơ đóng góp vai B trên slice chung của nhóm, chưa phải bài cá nhân hoàn chỉnh theo hướng dẫn bên dưới. README yêu cầu mỗi học viên tự gán nhãn slice của mình trong repo riêng, hoàn tất P0–P6 và chạy `lab11.py check` đạt trước khi nộp. Lần kiểm ngày 2026-09-29 trên repo này còn 39 điều kiện chưa đạt. Cần làm đủ phần cá nhân hoặc có xác nhận rõ của giảng viên rằng được chấm theo phân vai nhóm.
 
 - Học viên: Võ Trọng Nghĩa, MSSV 2A202602072; vai trong nhóm: B (QA reviewer).
 - `submission/00_setup/mode.json` của repo cá nhân từng giao `B2-mid` theo cơ chế CLI. Hồ sơ nhóm thực tế dùng **một slice chung `B4-center`** và chia vai A/B/C như [TEAMMATES.md](https://github.com/DTKien2005/K4-DAY11-Lab11/blob/main/TEAMMATES.md); phần Nghĩa làm là QA độc lập cho bản nhãn của A.
