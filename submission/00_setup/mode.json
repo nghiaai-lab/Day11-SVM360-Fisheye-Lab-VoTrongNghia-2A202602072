@@ -1,0 +1,15 @@
+{
+  "members": [
+    "kien",
+    "nghia",
+    "tin"
+  ],
+  "assignments": {
+    "kien": "B4-dense",
+    "nghia": "B2-mid",
+    "tin": "B4-edge"
+  },
+  "self": "nghia",
+  "slice": "B2-mid",
+  "degrade": []
+}

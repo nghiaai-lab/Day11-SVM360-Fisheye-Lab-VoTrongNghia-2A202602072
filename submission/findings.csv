@@ -1,1 +1,5 @@
 round,slice,frame,object_ref,cell,what,why,severity,owner,rule_id,evidence,action,rules_version,note
+r2_qa,B4-center,adasind_295948.jpg,L4,L_only,ATTRIBUTE,,,,R05,submission/screenshots/qa_B_295948_overlay.png,,v1.0.0,Nghĩa xác nhận Bike bị vật ở tiền cảnh che; custom occluded=false cần A kiểm và sửa thành true.
+r2_qa,B4-center,adasind_295948.jpg,L5,L_only,ATTRIBUTE,,,,R05,submission/screenshots/qa_B_295948_overlay.png,,v1.0.0,Nghĩa xác nhận Pedestrian bị vật/phương tiện che phần dưới; custom occluded=false cần A kiểm và sửa thành true.
+r2_qa,B4-center,adasind_295948.jpg,L7,L_only,ATTRIBUTE,,,,R05,submission/screenshots/qa_B_295948_overlay.png,,v1.0.0,Nghĩa xác nhận Truck phía sau bị vật khác che đáng kể; custom occluded=false cần A kiểm và sửa thành true.
+r2_qa,B4-center,adasind_295948.jpg,XML#1-Car-H26.99,L_only,SPURIOUS,,,,R01,submission/screenshots/qa_B_295948_overlay.png,,v1.0.0,"Nghĩa xác nhận Car là đối tượng thật nhưng box chỉ cao 26.99px, dưới H40 của bài; A kiểm và bỏ box dưới ngưỡng."
