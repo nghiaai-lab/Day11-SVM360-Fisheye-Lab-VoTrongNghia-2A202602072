@@ -10,6 +10,7 @@
 - `submission/00_setup/mode.json` của repo cá nhân từng giao `B2-mid` theo cơ chế CLI. Hồ sơ nhóm thực tế dùng **một slice chung `B4-center`** và chia vai A/B/C như [TEAMMATES.md](https://github.com/DTKien2005/K4-DAY11-Lab11/blob/main/TEAMMATES.md); phần Nghĩa làm là QA độc lập cho bản nhãn của A.
 - Phần đã có bằng chứng: [QA mù B4-center của Nguyễn Trí Tín](submission/r2_qa/qa_review.md), [bảng tiếp nhận](submission/r2_qa/qa_intake.md), [bốn finding](submission/findings.csv) và [ảnh QA](submission/screenshots/qa_B_295948_overlay.png).
 - Ghi chú QA do Nghĩa thực hiện trước vòng P3: [parking](submission/parking/b_review_notes.md) và [C0](submission/p1_calib/b_review_notes.md).
+- [Đối chiếu P5 bổ sung](submission/rework/b_recheck.md) ghi rõ bản XML v2 đã bỏ box dưới ngưỡng nhưng hai thuộc tính `occluded` vẫn chưa khớp finding P3; cần nhóm xử lý trước khi coi toàn bộ ca sửa đã đạt.
 - [Repo nhóm](https://github.com/DTKien2005/K4-DAY11-Lab11) và [nhánh ghi chú QA của Nghĩa](https://github.com/DTKien2005/K4-DAY11-Lab11/tree/nghia-qa-notes) là nguồn đối chiếu phối hợp. Export gán nhãn B4-center trong repo nhóm thuộc Nguyễn Trí Tín; không phải bản gán nhãn cá nhân B2-mid của Nghĩa.
 
 Trạng thái bài nộp được xác định bằng `python3 lab11.py check` trên **repo cá nhân này**; các link nhóm chỉ bổ sung nguồn gốc QA.

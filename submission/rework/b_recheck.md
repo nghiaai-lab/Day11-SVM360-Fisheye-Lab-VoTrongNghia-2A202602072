@@ -1,0 +1,10 @@
+# Đối chiếu P5 khi chuẩn bị nộp hồ sơ cá nhân vai B
+
+Ngày kiểm tệp: 2026-09-29. Đây là bản đối chiếu kỹ thuật bổ sung theo yêu cầu của Nghĩa, dựa trên [QA P3](../r2_qa/qa_review.md), [ảnh QA](../screenshots/qa_B_295948_overlay.png) và [XML v2 công khai của nhóm](https://github.com/DTKien2005/K4-DAY11-Lab11/blob/main/submission/rework/annotations-v2.xml). Nó không thay thế một xác nhận đã kiểm trực tiếp trong CVAT ở thời điểm A bàn giao.
+
+- XML v2 có SHA-256 `9313188f1a2e8609768b9a2b3293378ec9c34ef796448fced8af9a05c9dbc2ee`, khớp [lock2](https://github.com/DTKien2005/K4-DAY11-Lab11/blob/main/submission/rework/lock2.txt) mã `9313-188F`.
+- Trên `adasind_295948.jpg`, box `Car` tại `(451.92,934.43)–(467.43,961.42)` cao 26,99 px đã được bỏ: **đạt yêu cầu R01** trong QA P3.
+- `L4 Bike` tại `(0,892.81)–(140.20,1215.20)` vẫn có custom attribute `occluded=false`. `L5 Pedestrian` tại `(107,921.46)–(142.51,1024.89)` cũng vẫn là `false`. Hai box này còn trong XML v2, trong khi [QA P3](../r2_qa/qa_review.md) đã yêu cầu A kiểm và sửa thành `true` theo R05. Cờ `occluded="1"` trên shape không đồng nghĩa custom attribute đã được sửa. **Hai finding này chưa thể xác nhận đã đóng.**
+- `L7 Truck` tại `(420.91,914.62)–(439.00,968.02)` không còn trong XML v2. [Bảng delta của nhóm](https://github.com/DTKien2005/K4-DAY11-Lab11/blob/main/submission/rework/delta.md) ghi L7 là `SPURIOUS` đã sửa. Vì đối tượng đã bị bỏ, yêu cầu cập nhật `occluded` của box cũ không còn áp dụng; việc bỏ box phải được đánh giá theo quyết định P4 và ảnh, không thể gọi là một thuộc tính đã đổi thành `true`.
+
+[TEAMMATES.md](https://github.com/DTKien2005/K4-DAY11-Lab11/blob/main/TEAMMATES.md) ghi B đã kiểm và ba thuộc tính `occluded=true` đã cập nhật. Nội dung đó **không khớp XML v2 đang khóa** ở ba trường hợp trên. Ngoài ra, `findings.csv` trên main của nhóm hiện có ba dòng `r2_qa` khác với [bốn finding P3 của Nghĩa trong repo này](../findings.csv). A/C cần đối chiếu và cập nhật hồ sơ nhóm hoặc bản nhãn theo đúng quyết định đã chốt. Đến khi có bản khóa mới hoặc giải thích có căn cứ, trạng thái P5 của hai finding L4/L5 là **cần xử lý**, không phải đã đạt toàn bộ.
