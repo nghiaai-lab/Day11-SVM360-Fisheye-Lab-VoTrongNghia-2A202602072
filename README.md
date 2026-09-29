@@ -2,20 +2,14 @@
 
 **Bài chính Day 11 · 240 phút lab · mỗi học viên nộp một repo Public.** Bạn có thể trao đổi và đổi bản export để QA, nhưng tự gán nhãn, ghi quyết định và nộp bài của mình. Bắt đầu từ trang này; [GUIDE.md](GUIDE.md) là hướng dẫn thao tác CVAT chi tiết khi cần, còn [RUBRIC.md](RUBRIC.md) cho biết **100 điểm** được đọc từ bằng chứng nào.
 
-## Bằng chứng đóng góp của Võ Trọng Nghĩa trong nhóm
+## Hồ sơ cá nhân — Võ Trọng Nghĩa · 2A202602072
 
-**[Xem chỉ mục bằng chứng và kết quả vai B](ROLE_B_REPORT.md).**
+**Trạng thái hình thức:** `lab11.py check` đạt ngày 2026-09-29 trên repo cá nhân này. [ROLE_B_REPORT.md](ROLE_B_REPORT.md) là chỉ mục bằng chứng cá nhân và lịch sử đóng góp QA cho nhóm.
 
-**Trạng thái so với đề gốc:** Đây là hồ sơ đóng góp vai B trên slice chung của nhóm, chưa phải bài cá nhân hoàn chỉnh theo hướng dẫn bên dưới. README và [GUIDE](GUIDE.md) yêu cầu mỗi học viên tự gán nhãn slice của mình trong repo riêng, hoàn tất P0–P6 và chạy `lab11.py check` đạt trước khi nộp. Lần kiểm ngày 2026-09-29 trên repo này vẫn chưa đạt; các bản phác kế hoạch không thay export CVAT. Cần làm đủ phần cá nhân hoặc có xác nhận rõ của giảng viên rằng được chấm theo phân vai nhóm.
-
-- Học viên: Võ Trọng Nghĩa, MSSV 2A202602072; vai trong nhóm: B (QA reviewer).
-- `submission/00_setup/mode.json` của repo cá nhân từng giao `B2-mid` theo cơ chế CLI. Hồ sơ nhóm thực tế dùng **một slice chung `B4-center`** và chia vai A/B/C như [TEAMMATES.md](https://github.com/DTKien2005/K4-DAY11-Lab11/blob/main/TEAMMATES.md); phần Nghĩa làm là QA độc lập cho bản nhãn của A.
-- Phần đã có bằng chứng: [QA mù B4-center của Nguyễn Trí Tín](submission/r2_qa/qa_review.md), [bảng tiếp nhận](submission/r2_qa/qa_intake.md), [bốn finding](submission/findings.csv) và [ảnh QA](submission/screenshots/qa_B_295948_overlay.png).
-- Ghi chú QA do Nghĩa thực hiện trước vòng P3: [parking](submission/parking/b_review_notes.md) và [C0](submission/p1_calib/b_review_notes.md).
-- [Đối chiếu P5 bổ sung](submission/rework/b_recheck.md) ghi rõ bản XML v2 đã bỏ box dưới ngưỡng nhưng hai thuộc tính `occluded` vẫn chưa khớp finding P3; cần nhóm xử lý trước khi coi toàn bộ ca sửa đã đạt.
-- [Repo nhóm](https://github.com/DTKien2005/K4-DAY11-Lab11) và [nhánh ghi chú QA của Nghĩa](https://github.com/DTKien2005/K4-DAY11-Lab11/tree/nghia-qa-notes) là nguồn đối chiếu phối hợp. Export gán nhãn B4-center trong repo nhóm thuộc Nguyễn Trí Tín; không phải bản gán nhãn cá nhân B2-mid của Nghĩa.
-
-Trạng thái bài nộp được xác định bằng `python3 lab11.py check` trên **repo cá nhân này**; các link nhóm chỉ bổ sung nguồn gốc QA.
+- Slice cá nhân: **B2-mid**; export P2 đã khóa với mã `7C9C-5D86`.
+- Bằng chứng chính: [parking](submission/parking/annotations.xml), [C0](submission/p1_calib/annotations.xml), [P2 đã khóa](submission/r1_craft/lock.txt), [QA mù B2-mid](submission/r2_qa/qa_review.md), [bảng finding](submission/findings.csv), [bảng vùng](submission/r3_diag/zone_table.md), [delta rework](submission/rework/delta.md) và [manifest](submission/manifest.json).
+- Theo time-box chính thức, bài đã chạy `degrade frame3` và `degrade k12`. Export B2-mid dùng support prefill; còn thiếu `ego_body` trên ba frame và vòng rework không thay đổi XML. Các điểm này được ghi công khai trong Self-QC, QA và delta, vì vậy `check` đạt chỉ xác nhận cấu trúc hồ sơ đầy đủ, không có nghĩa chất lượng nhãn đạt tối đa.
+- [Bằng chứng nhóm B4-center](submission/r2_qa/qa_review_B4-center.md) và [repo nhóm](https://github.com/DTKien2005/K4-DAY11-Lab11) được giữ để chứng minh phần QA phối hợp trước đó; chúng không thay thế slice cá nhân B2-mid.
 
 ## Bạn sẽ làm gì và nộp gì?
 
