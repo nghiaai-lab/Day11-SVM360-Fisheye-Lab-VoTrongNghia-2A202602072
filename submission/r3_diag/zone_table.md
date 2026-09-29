@@ -10,5 +10,5 @@ Lệnh `python3 lab11.py model` tự ghi bảng số (cùng cách đếm với `
 
 ## Nhận xét
 
-- Bản L thiếu nhiều nhất ở `center`: 6/9 reference; tiếp theo `mid` 4/8 và `edge` 2/3. Model có nhiều box thừa nhất ở `mid` (10), rồi `center` (8), trong khi `edge` không có box thừa.
-- Nguyên nhân chắc chắn của L là dùng support-prefill và cắt frame thứ ba theo time-box nên recall thấp; hai frame giữ lại cũng còn thiếu `ego_body`. Với model, méo fisheye và vật nhỏ/nền đông là giả thuyết cần kiểm trên ảnh, không thể kết luận chỉ từ ba frame. Teaching reference là đối chứng dạy học, không phải gold set sản xuất.
+- Bản của tôi thiếu nhiều nhất ở `center`: 6/9 box reference; sau đó là `mid` 4/8 và `edge` 2/3. Model có 10 box thừa ở `mid`, 8 box ở `center` và không có box thừa ở `edge`.
+- Tôi giữ 8 box support prefill và bỏ frame thứ ba, nên số box thiếu cao là điều dễ hiểu. Với hai frame đầu, tôi vẫn phải xem từng ca trên ảnh mới biết lý do. Hai frame này còn thiếu `ego_body`, nhưng bảng trên chỉ đếm box. Ba frame chưa đủ để kết luận lỗi chung của model hoặc dữ liệu fisheye.

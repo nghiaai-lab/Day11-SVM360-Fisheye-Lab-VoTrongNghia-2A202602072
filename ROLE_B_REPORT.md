@@ -1,8 +1,8 @@
-# Hồ sơ cá nhân và đóng góp vai B — Võ Trọng Nghĩa · 2A202602072
+# Bài cá nhân và phần QA nhóm — Võ Trọng Nghĩa · 2A202602072
 
 ## Bài cá nhân B2-mid
 
-Repo cá nhân đã hoàn tất bộ hiện vật P0–P6 và `lab11.py check` đạt ngày 2026-09-29. Các bằng chứng chính gồm:
+Tôi đã lưu đủ các file P0–P6 để `lab11.py check` chạy đạt ngày 29/09/2026. Các phần còn thiếu về nhãn được ghi ở Self-QC và QA.
 
 - P0: [parking XML](submission/parking/annotations.xml) và [observations](submission/parking/observations.md).
 - P1: [C0 XML](submission/p1_calib/annotations.xml), [lock C0](submission/p1_calib/lock.txt) và [compare C0](submission/p1_calib/compare.md).
@@ -10,26 +10,26 @@ Repo cá nhân đã hoàn tất bộ hiện vật P0–P6 và `lab11.py check` �
 - P3–P4: [QA mù B2-mid](submission/r2_qa/qa_review.md), [findings](submission/findings.csv), [local quality](submission/r3_diag/local_quality.md) và [zone table](submission/r3_diag/zone_table.md).
 - P5–P6: [delta rework](submission/rework/delta.md), [guideline patch](submission/20_guideline_patch.md), [escalation ticket](submission/30_escalation_ticket.md), [review plan](submission/45_review_plan.md) và [exit ticket](submission/50_exit_ticket.md).
 
-Theo time-box chính thức, bài đã chạy `degrade frame3` và `degrade k12`. Bản B2-mid dùng support prefill (`prefill_kept=8`, `prefill_edited=0`, `new=0`), còn thiếu `ego_body` trên ba frame và rework không thay đổi XML. Hồ sơ ghi rõ các hạn chế này; không nhận là đã sửa hoặc đạt chất lượng tối đa.
+Bài dùng `degrade frame3` và `degrade k12`. B2-mid dùng support prefill (`prefill_kept=8`, `prefill_edited=0`, `new=0`). Hai frame phải làm vẫn thiếu `ego_body`; frame thứ ba đã cắt. Bản rework chưa đổi XML nên tôi không tính các lỗi này là đã sửa.
 
 ## Đóng góp QA trong nhóm
 
-[Repo nhóm K4-DAY11-Lab11](https://github.com/DTKien2005/K4-DAY11-Lab11) giữ hồ sơ tích hợp A → B → C; [TEAMMATES.md của nhóm](https://github.com/DTKien2005/K4-DAY11-Lab11/blob/main/TEAMMATES.md) ghi phân vai và bàn giao. Các export B4-center và bản sửa v2 thuộc người gán nhãn Nguyễn Trí Tín. Nghĩa thực hiện QA và đưa finding, không nhận các export đó là nhãn cá nhân của mình.
+[Repo nhóm K4-DAY11-Lab11](https://github.com/DTKien2005/K4-DAY11-Lab11) lưu phần việc chung của A, B và C; [TEAMMATES.md](https://github.com/DTKien2005/K4-DAY11-Lab11/blob/main/TEAMMATES.md) ghi phân vai. B4-center và bản v2 do Nguyễn Trí Tín gán/sửa; tôi chỉ soát và gửi finding, không tính các export đó là nhãn mình vẽ.
 
-## Bằng chứng do Nghĩa thực hiện
+## Phần tôi làm trong nhóm
 
 | Pha | Việc và kết quả | Bằng chứng trong repo cá nhân | Nguồn nhóm |
 |---|---|---|---|
-| P0 | Soát vạch parking và `free_space` của A; giữ riêng hai nét sát mép là ca cần xác nhận thêm. | [Ghi chú parking](submission/parking/b_review_notes.md) | [Export parking của A](https://github.com/DTKien2005/K4-DAY11-Lab11/blob/main/submission/parking/annotations.xml) |
-| P1 | Soát C0; nêu ca L2 người dắt xe cần tách `Pedestrian` và `Bike` theo R03. | [Ghi chú C0](submission/p1_calib/b_review_notes.md) | [Bản C0 đã khóa của A](https://github.com/DTKien2005/K4-DAY11-Lab11/blob/main/submission/p1_calib/lock.txt) |
-| P3 | Nhận B4-center đã khóa `6997-BF13`, kiểm SHA-256 `6997bf13e8daac9ae1cbf02fa422682f9eb3b960cc2812c21d587eaa9293e7f0`; QA mù đủ ba ảnh trước reference/model. | [Tiếp nhận](submission/r2_qa/qa_intake.md), [review B4-center](submission/r2_qa/qa_review_B4-center.md), [overlay](submission/r2_qa/qa_overlay.html), [ảnh chụp](submission/screenshots/qa_B_295948_overlay.png) | [Lock bản đầu của A](https://github.com/DTKien2005/K4-DAY11-Lab11/blob/main/submission/r1_craft/lock.txt) |
-| P3 | Ghi bốn finding xác nhận ở `adasind_295948.jpg`: ba thuộc tính `occluded` L4/L5/L7 cần kiểm sửa và một box `Car` cao 26,99 px dưới ngưỡng R01. Giữ riêng các ca chưa đủ căn cứ ở `270517` và `271039`; không gọi chúng là lỗi đã xác nhận. | [Chi tiết B4-center](submission/r2_qa/qa_review_B4-center.md) | [Bàn giao P3 trên TEAMMATES](https://github.com/DTKien2005/K4-DAY11-Lab11/blob/main/TEAMMATES.md) |
-| P5 | Bảng bàn giao nhóm ghi B đã kiểm bản sửa khóa `9313-188F` và xác nhận đạt. Đối chiếu XML v2 khi chuẩn bị nộp cho thấy box dưới H=40 đã bỏ, nhưng L4/L5 vẫn có custom `occluded=false`, còn L7 đã bị bỏ thay vì đổi thuộc tính. Vì vậy chưa thể xác nhận ba finding thuộc tính đã được xử lý như bảng bàn giao ghi. | [Đối chiếu P5 bổ sung](submission/rework/b_recheck.md) | [Bảng bàn giao](https://github.com/DTKien2005/K4-DAY11-Lab11/blob/main/TEAMMATES.md), [lock v2](https://github.com/DTKien2005/K4-DAY11-Lab11/blob/main/submission/rework/lock2.txt), [delta](https://github.com/DTKien2005/K4-DAY11-Lab11/blob/main/submission/rework/delta.md) |
+| P0 | Tôi soát parking và `free_space` của A; hai nét sát mép vẫn cần xem lại. | [Ghi chú parking](submission/parking/b_review_notes.md) | [Export parking của A](https://github.com/DTKien2005/K4-DAY11-Lab11/blob/main/submission/parking/annotations.xml) |
+| P1 | Tôi soát C0 và đề nghị tách L2 thành `Pedestrian` và `Bike` theo R03 vì người đang dắt xe. | [Ghi chú C0](submission/p1_calib/b_review_notes.md) | [Bản C0 đã khóa của A](https://github.com/DTKien2005/K4-DAY11-Lab11/blob/main/submission/p1_calib/lock.txt) |
+| P3 | Tôi nhận B4-center khóa `6997-BF13`, kiểm SHA-256 khớp rồi soát ba ảnh trước khi mở reference/model. | [Tiếp nhận](submission/r2_qa/qa_intake.md), [review B4-center](submission/r2_qa/qa_review_B4-center.md), [overlay](submission/r2_qa/qa_overlay.html), [ảnh chụp](submission/screenshots/qa_B_295948_overlay.png) | [Lock bản đầu của A](https://github.com/DTKien2005/K4-DAY11-Lab11/blob/main/submission/r1_craft/lock.txt) |
+| P3 | Tôi chốt bốn finding ở `adasind_295948.jpg`: L4/L5/L7 cần kiểm `occluded` và một box `Car` cao 26,99 px dưới ngưỡng. Các chỗ chưa chắc ở `270517` và `271039` tôi để mở. | [Chi tiết B4-center](submission/r2_qa/qa_review_B4-center.md) | [Bàn giao P3 trên TEAMMATES](https://github.com/DTKien2005/K4-DAY11-Lab11/blob/main/TEAMMATES.md) |
+| P5 | `TEAMMATES.md` ghi B đã kiểm bản `9313-188F`. XML v2 đã bỏ box dưới H=40, nhưng L4/L5 vẫn là `occluded=false` và L7 không còn. Vì vậy tôi chưa tính ba ca thuộc tính là đã sửa xong. | [Đối chiếu P5](submission/rework/b_recheck.md) | [Bảng bàn giao](https://github.com/DTKien2005/K4-DAY11-Lab11/blob/main/TEAMMATES.md), [lock v2](https://github.com/DTKien2005/K4-DAY11-Lab11/blob/main/submission/rework/lock2.txt), [delta](https://github.com/DTKien2005/K4-DAY11-Lab11/blob/main/submission/rework/delta.md) |
 
-## Ranh giới giữa bài cá nhân và bằng chứng nhóm
+## Bài của tôi và bài nhóm
 
-- [Manifest nhóm](https://github.com/DTKien2005/K4-DAY11-Lab11/blob/main/submission/manifest.json) ghi `failed_gates: []` cho **hồ sơ tích hợp**, không phải xác nhận `lab11.py check` của repo cá nhân này.
-- `submission/00_setup/mode.json` giao `B2-mid` cho bài cá nhân. Nhóm đã làm trên slice chung `B4-center` với ba vai A/B/C; review B4-center là bằng chứng đóng góp thêm.
-- Bảng thành viên trong [README nhóm](https://github.com/DTKien2005/K4-DAY11-Lab11/blob/main/README.md) còn ghi `B2-mid` và gắn `Parking Lock` ở dòng Nghĩa; điều này không khớp TEAMMATES và lịch sử commit. Repo cá nhân này không nhận bản gán nhãn parking/B2-mid đó là sản phẩm của Nghĩa.
-- `submission/findings.csv` hiện là bảng finding của bài cá nhân B2-mid. Bốn finding B4-center trước đây được lưu trong [review B4-center](submission/r2_qa/qa_review_B4-center.md) và [ghi chú P5 nhóm](submission/rework/b_recheck.md).
-- `lab11.py check` đã đạt trên repo cá nhân. Kết quả này xác nhận đủ cấu trúc; các cảnh báo chất lượng được giữ nguyên để người chấm đánh giá theo rubric.
+- [Manifest nhóm](https://github.com/DTKien2005/K4-DAY11-Lab11/blob/main/submission/manifest.json) là kết quả check bài chung. Bài cá nhân của tôi có manifest riêng trong repo này.
+- `submission/00_setup/mode.json` giao B2-mid cho tôi. B4-center là bài chung và review đó là phần tôi làm thêm với nhóm.
+- [README nhóm](https://github.com/DTKien2005/K4-DAY11-Lab11/blob/main/README.md) còn gắn B2-mid/Parking Lock với tên tôi, nhưng phần này không khớp `TEAMMATES.md` và lịch sử commit. Tôi chỉ tính phần nào có file và commit đối chiếu được.
+- `submission/findings.csv` hiện dùng cho B2-mid. Bốn finding B4-center cũ nằm trong [review B4-center](submission/r2_qa/qa_review_B4-center.md) và [ghi chú P5](submission/rework/b_recheck.md).
+- `lab11.py check` đã đạt trên repo cá nhân. Tôi vẫn giữ các cảnh báo chưa sửa để thầy xem đúng tình trạng bài.

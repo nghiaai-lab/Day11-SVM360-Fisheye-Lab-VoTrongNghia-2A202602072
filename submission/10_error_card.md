@@ -23,8 +23,8 @@
 
 ## Phân tích của bạn
 
-Hai bảng trên do `python3 lab11.py card` tính từ `findings.csv`; chạy lại lệnh sẽ cập nhật bảng và giữ nguyên mục này. Viết cho lỗi nổi bật nhất, dẫn frame/`object_ref`.
+Hai bảng trên do `python3 lab11.py card` tính từ `findings.csv`.
 
-- Nguyên nhân khả dĩ (`why`) và vì sao bạn nghĩ vậy: lỗi nổi bật là `MISSING`. Ở B2-mid, các dòng `RM_noL` có reference và model cùng thấy nhưng L thiếu nên gán `E1_annotator_error`; các dòng `R_only` chỉ có reference được giữ `E5_unresolved`. Frame `102750` bị cắt time-box giải thích 5 box thiếu, còn hai frame giữ lại dùng support-prefill nhưng chưa rà đủ vật.
-- Cách sửa và ai nhận việc (`owner`): annotator mở lại hai frame bắt buộc, bổ sung vật đạt H=40 và `ego_body`, sau đó QA soát lạnh và khóa mới. Ca `R_only` chuyển QA/Lab Coach phân xử; box chỉ model có được giữ `E4_model_domain`, không tự thêm.
-- Bằng chứng (ảnh trong `screenshots/`, dòng findings, rule): `submission/screenshots/b2_mid_frame0_support.png`, các dòng B2-mid trong `findings.csv`, `r1_craft/compare.md`, `local_quality_conflicts.csv`, cùng R01, R02 và R07.
+- Lỗi nhiều nhất là `MISSING`. Frame `102750` có 5 box thiếu vì tôi đã cắt frame này theo time-box. Ở hai frame đầu, reference và model cùng có một số vật mà bản của tôi chưa có; tôi cần mở ảnh kiểm từng ca trước khi kết luận nguyên nhân.
+- Tôi cần mở lại hai frame bắt buộc, thêm các vật đạt H=40 và `ego_body`, rồi nhờ QA soát và khóa lại. Ca chỉ có reference hoặc chỉ có model vẫn để `E5_unresolved`, không tự thêm box.
+- Tôi dùng ảnh `submission/screenshots/b2_mid_frame0_support.png`, các dòng B2-mid trong `findings.csv`, `r1_craft/compare.md`, `local_quality_conflicts.csv` và các rule R01, R02, R07 để kiểm lại.

@@ -1,5 +1,5 @@
 id,date,question,decision,rationale,status
-D001,2026-09-29,B2-mid thiếu ego_body ở hai frame giữ lại,escalate,"Self-QC và QA lạnh cùng xác nhận; cần vẽ lại trong CVAT, không sửa XML khóa bằng tay",escalated
-D002,2026-09-29,Có làm frame thứ ba khi hết thời gian không,keep_with_reason,"Đã chạy degrade frame3 theo thứ tự time-box chính thức; không gọi frame chưa làm là đạt",decided
-D003,2026-09-29,Có dùng polygon K12 không,keep_with_reason,"Đã chạy degrade k12; phần stretch không thay tiêu chí nhãn chính",decided
-D004,2026-09-29,Có khóa rework khi chưa sửa được finding không,keep_with_reason,"Giữ cùng nội dung và ghi delta không cải thiện để bảo toàn truy vết thay vì tạo thay đổi không có bằng chứng",decided
+D001,2026-09-29,B2-mid thiếu ego_body ở hai frame giữ lại,escalate,"Tôi thấy lỗi này khi Self-QC và QA; cần mở CVAT vẽ lại, không sửa tay XML đã khóa",escalated
+D002,2026-09-29,Có làm frame thứ ba khi hết thời gian không,keep_with_reason,"Đã ghi degrade frame3; tôi không tính frame chưa làm là đạt",decided
+D003,2026-09-29,Có dùng polygon K12 không,keep_with_reason,"Tôi bỏ K12 để tập trung hai frame chính",decided
+D004,2026-09-29,Có khóa rework khi chưa sửa được finding không,keep_with_reason,"Bản v2 giống bản đầu; số không đổi và các finding chưa đóng",decided

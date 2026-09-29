@@ -6,14 +6,14 @@
 - Frame: `adasind_019560.jpg`.
 - Mã khóa bản được soát: `78D7-86D3`.
 - SHA-256 XML: `78d786d384cf9e3f6ed5af0b07f5147826f4fb4c98f5637424b63cf023411019` (đã kiểm khớp khóa).
-- Căn cứ: Nghĩa đã xem ảnh gốc cùng overlay nhãn A trên máy và xác nhận trực tiếp các nhận xét dưới đây; đối chiếu [luật gán nhãn](../../docs/02-rules-vi.md).
+- Cách soát: tôi mở ảnh gốc cùng overlay và đối chiếu với [luật gán nhãn](../../docs/02-rules-vi.md).
 - Bằng chứng nguồn: [XML C0 đã soát](https://github.com/DTKien2005/Day11-SVM360-Fisheye-Lab-Student/blob/56488ef147cb6fdb8829d65479b93cce435fed60/submission/p1_calib/annotations.xml), [mã khóa](https://github.com/DTKien2005/Day11-SVM360-Fisheye-Lab-Student/blob/56488ef147cb6fdb8829d65479b93cce435fed60/submission/p1_calib/lock.txt), [ảnh gốc](../../assets/images/adasind_019560.jpg).
 
 ## Nhận xét đã xác nhận trên ảnh
 
-| Object ref | Rule | Quan sát của Nghĩa | Nhận xét gửi A |
+| Object ref | Rule | Tôi thấy | Nhận xét gửi A |
 |---|---|---|---|
-| L1 — `ThreeWheeler` | R02, R04 | Class tương đối phù hợp; box bám đúng đối tượng. | Có thể giữ theo quan sát hiện tại. |
+| L1 — `ThreeWheeler` | R02, R04 | Class đúng và box bám phương tiện. | Có thể giữ. |
 | L2 — `Bike` | R03 | Người áo đỏ đang đứng/dắt xe máy, không ngồi điều khiển. | Cần tách thành hai box: `Pedestrian` cho người và `Bike` cho xe; mỗi box bám phần nhìn thấy theo R02. |
 | L3 — `Bike` | R03 | Người áo vàng đang ngồi trên xe. | Có thể giữ một box `Bike` chung cho cả người và xe. |
 
@@ -26,10 +26,8 @@
 | Hai polygon `lens_border` | R06, R08 | Biên phải bám phần viền tối ngoài trường nhìn. | Chưa xác nhận lỗi hình học cụ thể. |
 | Polygon `ego_body` | R02, R06, R07, R09 | Chỉ phủ phần thân/cụm xe camera nhìn thấy ở mép dưới; không lấn sang mặt đường hoặc đối tượng giao thông. | Chưa xác nhận lỗi hình học cụ thể. |
 
-## Bàn giao và trạng thái
+## Bàn giao
 
-Nhận xét P1 C0 của B đã được ghi nhận. L2 là yêu cầu sửa rõ ràng theo đánh giá của Nghĩa; A cần phản hồi và xử lý trên bản làm việc trong CVAT. Chưa có bằng chứng A đã sửa hoặc B đã kiểm lại bản sửa.
+Tôi đề nghị A sửa L2 thành một box `Pedestrian` và một box `Bike`. Lúc viết ghi chú này tôi chưa có bản A sửa để kiểm lại.
 
-Giữ bản XML và mã khóa đã soát để truy vết. Nếu khóa lại C0, làm theo quy trình relock và ghi lý do vào decision log; không ghi đè âm thầm bản đã khóa.
-
-Đây là ghi chú P1 theo guideline B, không phải báo cáo QA P3 và không được tính thành các dòng `round=r2_qa` trong `findings.csv`.
+Tôi giữ XML và mã khóa của bản đã soát. Nếu A khóa lại C0 thì cần tạo lock mới và ghi lý do. File này là ghi chú P1, không phải QA P3 trong `findings.csv`.

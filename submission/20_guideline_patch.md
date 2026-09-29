@@ -1,7 +1,7 @@
 # Guideline patch
 
-- **Rule mới đề xuất:** Trước khi khóa, mỗi frame ngoài danh sách ngoại lệ phải có ít nhất một `ignore_region` với `reason=ego_body`; nếu không xác định được biên thì ghi finding `IGNORE_SCOPE`, chụp ảnh và escalation, không tự đánh dấu đạt.
+- **Rule mới đề xuất:** Trước khi khóa, tôi sẽ kiểm mỗi frame có nhìn thấy thân xe hay không. Nếu có thì phải có `ignore_region` với `reason=ego_body`. Nếu chưa chắc biên, ghi `IGNORE_SCOPE`, chụp ảnh và hỏi người soát.
 - **Áp dụng cho:** `ignore_region.reason=ego_body`, đặc biệt các cấu trúc sát camera ở mép trái/dưới.
-- **Vì sao luật hiện tại (`docs/02-rules-vi.md`) không đủ:** R07 yêu cầu vẽ nhưng chưa nêu rõ cổng bàn giao khi support-prefill chỉ chứa `lens_border`. Trong B2-mid, `adasind_060000.jpg` và `adasind_086220.jpg` qua được bước import nhưng self-QC mới phát hiện thiếu ego body.
+- **Vì sao luật hiện tại (`docs/02-rules-vi.md`) không đủ:** R07 yêu cầu vẽ `ego_body` nhưng chưa nói phải kiểm gì trước khi khóa nếu support prefill chỉ có `lens_border`. Hai frame `060000` và `086220` import được nhưng đến Self-QC tôi mới thấy thiếu vùng này.
 - **`rules_version` mới:** v1.0.0 → v1.1.0.
-- **Hiệu lực từ:** áp dụng từ self-QC P2 và mọi vòng khóa sau đó.
+- **Hiệu lực từ:** dùng từ bước Self-QC P2 và các lần khóa sau.

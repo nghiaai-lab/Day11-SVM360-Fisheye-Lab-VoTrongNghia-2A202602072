@@ -1,9 +1,9 @@
 camera_id,slice_type,frames,risk,rationale
-front,normal,25,Thiếu đối chứng cảnh trước thông thường,Lấy cảnh trước nhìn rõ và rải theo thời gian nếu dữ liệu cho phép
-front,hard,25,Vật ở rìa và seam trước trái hoặc trước phải,Ưu tiên vật méo hoặc bị cắt và ca rider khó phân biệt nếu dữ liệu có
-rear,normal,25,Thiếu đối chứng cảnh sau thông thường,Lấy cảnh sau nhìn rõ để so với ca khó của chính camera sau
-rear,hard,25,Vật gần đuôi và seam sau trái hoặc sau phải,Ưu tiên ca bị che hoặc biên nhìn khó khi lùi đỗ nếu dữ liệu có
-left,normal,25,Thiếu đối chứng camera trái,Lấy cảnh bên trái nhìn rõ và giữ camera trái là một tầng mẫu riêng
-left,hard,25,Méo rìa và seam trái trước hoặc trái sau,Ưu tiên vật chạm vùng chồng và vùng bị thân xe che nếu dữ liệu có
-right,normal,25,Thiếu đối chứng camera phải,Lấy cảnh bên phải nhìn rõ và giữ camera phải là một tầng mẫu riêng
-right,hard,25,Méo rìa và seam phải trước hoặc phải sau,Ưu tiên vật chạm vùng chồng hoặc bị che khó tách nếu dữ liệu có
+front,normal,25,Cần mẫu cảnh trước bình thường,Tôi chọn cảnh nhìn rõ và rải theo thời gian nếu có metadata
+front,hard,25,Vật ở rìa hoặc seam trước,Tôi chọn thêm vật méo bị cắt và ca rider khó phân biệt
+rear,normal,25,Cần mẫu cảnh sau bình thường,Tôi chọn cảnh sau nhìn rõ để so với nhóm hard của camera sau
+rear,hard,25,Vật gần đuôi hoặc seam sau,Tôi chọn ca bị che và ca khó nhìn khi lùi đỗ
+left,normal,25,Cần mẫu bình thường của camera trái,Tôi giữ camera trái thành một nhóm riêng và chọn cảnh nhìn rõ
+left,hard,25,Méo rìa hoặc seam bên trái,Tôi chọn vật chạm vùng chồng và vật bị thân xe che
+right,normal,25,Cần mẫu bình thường của camera phải,Tôi giữ camera phải thành một nhóm riêng và chọn cảnh nhìn rõ
+right,hard,25,Méo rìa hoặc seam bên phải,Tôi chọn vật chạm vùng chồng và vật bị che khó tách

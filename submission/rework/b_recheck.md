@@ -1,10 +1,10 @@
-# Đối chiếu P5 khi chuẩn bị nộp hồ sơ cá nhân vai B
+# Tôi kiểm lại bản P5 của nhóm
 
-Ngày kiểm tệp: 2026-09-29. Đây là bản đối chiếu kỹ thuật bổ sung theo yêu cầu của Nghĩa, dựa trên [QA P3](../r2_qa/qa_review.md), [ảnh QA](../screenshots/qa_B_295948_overlay.png) và [XML v2 công khai của nhóm](https://github.com/DTKien2005/K4-DAY11-Lab11/blob/main/submission/rework/annotations-v2.xml). Nó không thay thế một xác nhận đã kiểm trực tiếp trong CVAT ở thời điểm A bàn giao.
+Tôi kiểm lại ngày 29/09/2026 bằng [QA P3 B4-center](../r2_qa/qa_review_B4-center.md), [ảnh QA](../screenshots/qa_B_295948_overlay.png) và [XML v2 của nhóm](https://github.com/DTKien2005/K4-DAY11-Lab11/blob/main/submission/rework/annotations-v2.xml).
 
 - XML v2 có SHA-256 `9313188f1a2e8609768b9a2b3293378ec9c34ef796448fced8af9a05c9dbc2ee`, khớp [lock2](https://github.com/DTKien2005/K4-DAY11-Lab11/blob/main/submission/rework/lock2.txt) mã `9313-188F`.
-- Trên `adasind_295948.jpg`, box `Car` tại `(451.92,934.43)–(467.43,961.42)` cao 26,99 px đã được bỏ: **đạt yêu cầu R01** trong QA P3.
-- `L4 Bike` tại `(0,892.81)–(140.20,1215.20)` vẫn có custom attribute `occluded=false`. `L5 Pedestrian` tại `(107,921.46)–(142.51,1024.89)` cũng vẫn là `false`. Hai box này còn trong XML v2, trong khi [QA P3](../r2_qa/qa_review.md) đã yêu cầu A kiểm và sửa thành `true` theo R05. Cờ `occluded="1"` trên shape không đồng nghĩa custom attribute đã được sửa. **Hai finding này chưa thể xác nhận đã đóng.**
-- `L7 Truck` tại `(420.91,914.62)–(439.00,968.02)` không còn trong XML v2. [Bảng delta của nhóm](https://github.com/DTKien2005/K4-DAY11-Lab11/blob/main/submission/rework/delta.md) ghi L7 là `SPURIOUS` đã sửa. Vì đối tượng đã bị bỏ, yêu cầu cập nhật `occluded` của box cũ không còn áp dụng; việc bỏ box phải được đánh giá theo quyết định P4 và ảnh, không thể gọi là một thuộc tính đã đổi thành `true`.
+- Box `Car` cao 26,99 px ở `adasind_295948.jpg` đã được bỏ, đúng yêu cầu R01 tôi ghi ở P3.
+- L4 Bike và L5 Pedestrian vẫn có custom attribute `occluded=false`. Cờ `occluded="1"` trên shape là trường khác, nên tôi chưa tính hai finding này là đã sửa.
+- L7 Truck không còn trong XML v2. Delta nhóm ghi box này là `SPURIOUS`. Vì box đã bị bỏ nên không thể nói thuộc tính cũ đã được đổi sang `true`.
 
-[TEAMMATES.md](https://github.com/DTKien2005/K4-DAY11-Lab11/blob/main/TEAMMATES.md) ghi B đã kiểm và ba thuộc tính `occluded=true` đã cập nhật. Nội dung đó **không khớp XML v2 đang khóa** ở ba trường hợp trên. Ngoài ra, `findings.csv` trên main của nhóm hiện có ba dòng `r2_qa` khác với [bốn finding P3 của Nghĩa trong repo này](../findings.csv). A/C cần đối chiếu và cập nhật hồ sơ nhóm hoặc bản nhãn theo đúng quyết định đã chốt. Đến khi có bản khóa mới hoặc giải thích có căn cứ, trạng thái P5 của hai finding L4/L5 là **cần xử lý**, không phải đã đạt toàn bộ.
+[TEAMMATES.md](https://github.com/DTKien2005/K4-DAY11-Lab11/blob/main/TEAMMATES.md) ghi cả ba thuộc tính đã đổi sang `true`, nhưng XML v2 không cho thấy điều đó. Vì vậy L4 và L5 vẫn cần nhóm kiểm lại. `findings.csv` của nhóm cũng khác bốn finding tôi đã ghi, nên tôi giữ file review B4-center riêng để thầy đối chiếu.

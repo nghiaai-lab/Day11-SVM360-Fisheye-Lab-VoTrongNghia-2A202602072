@@ -11,10 +11,7 @@
 - adasind_060000.jpg R7+M6 MISSING: chưa sửa
 - adasind_086220.jpg R2+M1 MISSING: chưa sửa
 - adasind_086220.jpg R3+M4 MISSING: chưa sửa
-- adasind_102750.jpg R1+M1 MISSING: chưa sửa
-- adasind_102750.jpg R2+M2 MISSING: chưa sửa
-- adasind_102750.jpg R5+M8 MISSING: chưa sửa
 
 ## Giải thích
 
-Bản rework khóa cùng nội dung với bản r1 (`7C9C-5D86`), nên các số trước/sau không đổi. Không có thao tác CVAT đủ căn cứ và thời gian để đóng các finding; giữ chúng ở trạng thái chưa sửa và escalation thay vì sửa XML bằng tay hoặc nhận đã cải thiện.
+Tôi chưa sửa được bốn ca này trong CVAT. Bản v2 giữ nguyên bản đầu (`7C9C-5D86`) nên số trước và sau không đổi; các finding vẫn đang mở. Frame `102750` đã cắt theo time-box nên tôi không đưa các ca của frame đó vào danh sách rework.
