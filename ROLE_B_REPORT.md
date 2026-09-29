@@ -16,5 +16,6 @@ Repo này là chỉ mục bằng chứng **QA độc lập** của Nghĩa trong 
 
 - [Manifest nhóm](https://github.com/DTKien2005/K4-DAY11-Lab11/blob/main/submission/manifest.json) ghi `failed_gates: []` cho **hồ sơ tích hợp**, không phải xác nhận `lab11.py check` của repo cá nhân này.
 - `submission/00_setup/mode.json` trong repo cá nhân ghi `B2-mid` theo cơ chế chia slice của CLI; nhóm đã làm trên slice chung `B4-center` với ba vai A/B/C như [TEAMMATES.md](https://github.com/DTKien2005/K4-DAY11-Lab11/blob/main/TEAMMATES.md). Bằng chứng QA của Nghĩa là review B4-center của A.
+- Bảng thành viên trong [README nhóm](https://github.com/DTKien2005/K4-DAY11-Lab11/blob/main/README.md) còn ghi `B2-mid` và gắn `Parking Lock` ở dòng Nghĩa; điều này không khớp TEAMMATES và lịch sử commit. Repo cá nhân này không nhận bản gán nhãn parking/B2-mid đó là sản phẩm của Nghĩa.
 - `findings.csv` trong repo cá nhân lưu bốn finding P3 Nghĩa đã chốt. Bản `findings.csv` trên main của nhóm hiện có ba dòng `r2_qa` khác; dùng [bản cá nhân](submission/findings.csv) để xem đúng bốn finding đó và [ghi chú P5](submission/rework/b_recheck.md) để xem điểm chưa khớp.
 - Nếu yêu cầu lớp là mỗi người **chỉ nộp vai được phân**, hãy đọc repo này cùng repo nhóm. Nếu yêu cầu là mỗi người phải tự hoàn tất toàn bộ P0–P6, repo cá nhân này chưa đủ bộ hiện vật đó.
