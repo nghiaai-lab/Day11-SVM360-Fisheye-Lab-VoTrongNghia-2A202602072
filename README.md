@@ -2,6 +2,18 @@
 
 **Bài chính Day 11 · 240 phút lab · mỗi học viên nộp một repo Public.** Bạn có thể trao đổi và đổi bản export để QA, nhưng tự gán nhãn, ghi quyết định và nộp bài của mình. Bắt đầu từ trang này; [GUIDE.md](GUIDE.md) là hướng dẫn thao tác CVAT chi tiết khi cần, còn [RUBRIC.md](RUBRIC.md) cho biết **100 điểm** được đọc từ bằng chứng nào.
 
+## Hồ sơ của Võ Trọng Nghĩa
+
+**[Xem chỉ mục bằng chứng và kết quả vai B](ROLE_B_REPORT.md).**
+
+- Học viên: Võ Trọng Nghĩa, MSSV 2A202602072; vai trong nhóm: B (QA reviewer).
+- `submission/00_setup/mode.json` của repo cá nhân từng giao `B2-mid` theo cơ chế CLI. Hồ sơ nhóm thực tế dùng **một slice chung `B4-center`** và chia vai A/B/C như [TEAMMATES.md](https://github.com/DTKien2005/K4-DAY11-Lab11/blob/main/TEAMMATES.md); phần Nghĩa làm là QA độc lập cho bản nhãn của A.
+- Phần đã có bằng chứng: [QA mù B4-center của Nguyễn Trí Tín](submission/r2_qa/qa_review.md), [bảng tiếp nhận](submission/r2_qa/qa_intake.md), [bốn finding](submission/findings.csv) và [ảnh QA](submission/screenshots/qa_B_295948_overlay.png).
+- Ghi chú QA do Nghĩa thực hiện trước vòng P3: [parking](submission/parking/b_review_notes.md) và [C0](submission/p1_calib/b_review_notes.md).
+- [Repo nhóm](https://github.com/DTKien2005/K4-DAY11-Lab11) và [nhánh ghi chú QA của Nghĩa](https://github.com/DTKien2005/K4-DAY11-Lab11/tree/nghia-qa-notes) là nguồn đối chiếu phối hợp. Export gán nhãn B4-center trong repo nhóm thuộc Nguyễn Trí Tín; không phải bản gán nhãn cá nhân B2-mid của Nghĩa.
+
+Trạng thái bài nộp được xác định bằng `python3 lab11.py check` trên **repo cá nhân này**; các link nhóm chỉ bổ sung nguồn gốc QA.
+
 ## Bạn sẽ làm gì và nộp gì?
 
 Bạn sẽ giải một vòng công việc dữ liệu: phân biệt vạch **chia ô đỗ** với vạch chỉ lối xe chạy trên ảnh bãi đỗ; gán nhãn object trên ảnh fisheye; tự soát trước khi xem reference; review bài khác theo guideline; đọc xung đột giữa người, reference và model; sửa có căn cứ; rồi lập kế hoạch sampling/gold set cho **front, rear, left, right**. Toàn bộ các phần này nằm trong một buổi lab 240 phút.
